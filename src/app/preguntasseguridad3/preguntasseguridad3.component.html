@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas de segridad</title>
+</head>
+<body>
+    <nz-layout class="layout">
+        <nz-header>
+            <nz-descriptions class="colors" nzSize="small" [nzColumn]="6">
+                <nz-descriptions-item id="myHeader"nzTitle="Atendiendo a" [nzSpan]="1">Jose Gamelo</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Perfil" [nzSpan]="1">Asegurado/Contratante</nz-descriptions-item>
+              </nz-descriptions>
+
+              <nz-descriptions nzSize="small" [nzColumn]="6">
+                <nz-descriptions-item nzTitle="Nombre" [nzSpan]="1">Jose Antonio Gamelo</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="No. Cliente" [nzSpan]="1">0025006611</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Telefono" [nzSpan]="1">5538899189</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="RFC" [nzSpan]="1">GAGJ2005281H0</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Rol" [nzSpan]="1">Asegurado</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Reg" [nzSpan]="1">
+                  <i class="icon3"nz-icon nzType="close-circle" nzTheme="twotone" [nzTwotoneColor]="'#D43019'"></i>
+                </nz-descriptions-item>
+              </nz-descriptions>
+    
+              <nz-descriptions nzSize="small" [nzColumn]="6">
+                <nz-descriptions-item nzTitle="Email" [nzSpan]="1">PRUEBA@GNP.COM.MX</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Nacionalidad" [nzSpan]="1">Peru</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Sexo" [nzSpan]="1">Masculino</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Edad" [nzSpan]="1">20 años</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Perfil" [nzSpan]="1">Clasico</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Reg.Portal" [nzSpan]="1">
+                  <i class="icon2" nz-icon nzType="check-circle" nzTheme="twotone" [nzTwotoneColor]="'#1967D4'"></i>
+                </nz-descriptions-item>
+              </nz-descriptions>
+        </nz-header>
+        <br><br>
+        <nz-content>
+            <nz-breadcrumb nzSeparator="/">
+                <nz-breadcrumb-item>  <i nz-icon nzType="home"></i>
+                  Identificacion del cliente 
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item>
+                  Polizas
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item>
+                  detalle de la poliza
+                </nz-breadcrumb-item>
+              </nz-breadcrumb>
+
+              <div class="inner-content">
+                <div class="inner-content2">
+                  <nz-page-header-content>
+                    <nz-descriptions  nzSize="small"  [nzColumn]="6">
+                    <nz-descriptions-item class="DatosAzules" nzTitle="Poliza" [nzSpan]="1"> 
+                        <nz-select>
+                          <nz-option nzValue="" nzLabel="00001405545144"></nz-option>
+                        </nz-select>
+                      </nz-descriptions-item>
+                      <nz-descriptions-item nzTitle="Version" [nzSpan]="1">
+                        <nz-select>
+                          <nz-option nzValue="" nzLabel="2"></nz-option>
+                        </nz-select>
+                      </nz-descriptions-item>
+                      <nz-descriptions-item nzTitle="Ramo" [nzSpan]="1"><p>GMM</p></nz-descriptions-item>
+                    </nz-descriptions>
+                      <nz-descriptions nzSize="small" [nzColumn]="6">
+                      <nz-descriptions-item nzTitle="Estatus" [nzSpan]="1"><p>Vigente 
+                        <i nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'"></i>
+                      </p></nz-descriptions-item>
+                      <nz-descriptions-item nzTitle="Segmento" [nzSpan]="1"><p>Individual</p></nz-descriptions-item>
+                      <nz-descriptions-item nzTitle="Producto" [nzSpan]="1"><p>Premier Individual</p></nz-descriptions-item> 
+                      <nz-descriptions-item nzTitle="Circulo" [nzSpan]="1"><p>Novus</p></nz-descriptions-item>
+                      <nz-descriptions-item nzTitle="Pagada hasta" [nzSpan]="1"><p>02/07/2020</p></nz-descriptions-item>
+              
+                    </nz-descriptions>
+                  </nz-page-header-content>
+                 </div>
+                 <button class="btn2" nz-button [nzType]="'primary'" (click)="showModal()"><span>Ver documentos</span><i nz-icon nzType="down" nzTheme="outline"></i></button>
+                    <nz-modal [(nzVisible)]="isVisible" nzTitle="Preguntas de Seguridad" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+                        <h5>¿Cual es tu fecha de nacimiento?</h5>
+                        <form nz-form>
+                          <nz-form-item>
+                            <nz-form-control [nzSpan]="14">
+                              <input nz-input name="date" type="date" id="date">
+                              <button nz-button nzType="validar">Validar</button>
+                            </nz-form-control>
+                          </nz-form-item >
+                        </form>
+                        <h5>¿Cual es tu forma de pago?</h5>
+                        <form nz-form>
+                         <nz-form-item>
+                           <nz-form-control [nzSpan]="14">
+                             <input nz-input name="pago" type="pago" id="pago">
+                             <button nz-button nzType="validar">Validar</button>
+                           </nz-form-control>
+                         </nz-form-item >
+                       </form>
+                       <h5>¿Cual es su importe total a pagar?</h5>
+                       <form nz-form>
+                         <nz-form-item>
+                           <nz-form-control [nzSpan]="14">
+                             <input nz-input name="importe" type="importe" id="importe">
+                             <button nz-button nzType="validar">Validar</button>
+                           </nz-form-control>
+                         </nz-form-item >
+                       </form>
+                       <h5>¿Cual es su RFC?</h5>
+                       <form nz-form>
+                         <nz-form-item>
+                           <nz-form-control [nzSpan]="14">
+                             <input nz-input name="RFC" type="RFC" id="RFC">
+                             <button nz-button nzType="validar">Validar</button>
+                           </nz-form-control>
+                         </nz-form-item >
+                       </form>
+                       <h5>¿Cual es su estado civil?</h5>
+                       <form nz-form>
+                         <nz-form-item>
+                           <nz-form-control [nzSpan]="14">
+                             <input nz-input name="status" type="status" id="status">
+                             <button nz-button nzType="validar">Validar</button>
+                           </nz-form-control>
+                         </nz-form-item >
+                       </form>
+                    </nz-modal>
+                    <br>
+                 <nz-button-group [nzSize]="size">
+                    <button nz-button nzType="primary"><i nz-icon nzType="left" ></i>Regresar</button>
+                  </nz-button-group>
+                  <button class="btn3" nz-button nzType="primary">Medios de contacto</button>
+                </div>
+        </nz-content>
+        <nz-footer></nz-footer>
+      </nz-layout>
+</body>
+</html>
