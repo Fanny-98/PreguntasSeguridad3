@@ -10,12 +10,13 @@ import {AngularFireDatabase} from 'angularfire2/database';
 export class AppComponent {
   title = 'PreguntasSeguridad3';
 
-  datosCliente: any[];
+/*   datosCliente: any[];
   constructor(db: AngularFireDatabase){
     db.list('/datosCliente').valueChanges()
     .subscribe(datosCliente => {
       this.datosCliente = datosCliente;
        console.log(this.datosCliente);
     });
-  }
+  } */
 }
+

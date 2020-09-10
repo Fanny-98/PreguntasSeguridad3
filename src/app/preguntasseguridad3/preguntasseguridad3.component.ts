@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NzButtonSize } from 'ng-zorro-antd/button';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 
 @Component({
@@ -8,10 +9,22 @@ import { NzButtonSize } from 'ng-zorro-antd/button';
   styleUrls: ['./preguntasseguridad3.component.css']
 })
 export class Preguntasseguridad3Component {
+  title = 'PreguntasSeguridad3';
+
+  
 
   isVisible = false;
 
-  constructor() {}
+  datosCliente: any[];
+  constructor(db:AngularFireDatabase) {
+    db.list('/datosCliente').valueChanges()
+    .subscribe(datosCliente => {
+      this.datosCliente = datosCliente;
+       console.log(this.datosCliente);
+      
+});
+}
+
 
   showModal(): void {
     this.isVisible = true;
@@ -28,6 +41,7 @@ export class Preguntasseguridad3Component {
   }
   size: NzButtonSize = 'large';
 }
+
 
 export class NzDemoBreadcrumbSeparatorComponent {}
 
