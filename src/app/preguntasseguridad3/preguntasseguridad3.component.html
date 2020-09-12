@@ -57,12 +57,12 @@
                     <nz-descriptions  nzSize="small"  [nzColumn]="6">
                     <nz-descriptions-item class="DatosAzules" nzTitle="Poliza" [nzSpan]="1"> 
                         <nz-select>
-                          <nz-option nzValue="" nzLabel="00001405545144"></nz-option>
+                          <nz-option nzValue="" poliza="poliza" nzLabel="{{poliza.noPoliza}}"></nz-option>
                         </nz-select>
                       </nz-descriptions-item>
                       <nz-descriptions-item nzTitle="Version" [nzSpan]="1">
                         <nz-select>
-                          <nz-option nzValue="" nzLabel="2"></nz-option>
+                          <nz-option nzValue="" poliza="poliza"  nzLabel="{{poliza.version}}"></nz-option>
                         </nz-select>
                       </nz-descriptions-item>
                       <nz-descriptions-item nzTitle="Ramo" [nzSpan]="1"><p ramos = "ramos">{{ramos.GMM}}</p></nz-descriptions-item>
@@ -71,7 +71,7 @@
                       <nz-descriptions-item nzTitle="Estatus" [nzSpan]="1"><p poliza = "poliza">{{poliza.estatus}}
                         <i nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'"></i>
                       </p></nz-descriptions-item>
-                      <nz-descriptions-item nzTitle="Segmento" [nzSpan]="1"><p>Individual</p></nz-descriptions-item>
+                      <nz-descriptions-item nzTitle="Segmento" [nzSpan]="1"><p poliza = "poliza">{{poliza.segmento}}l</p></nz-descriptions-item>
                       <nz-descriptions-item nzTitle="Producto" [nzSpan]="1"><p poliza = "poliza">{{poliza.producto}}</p></nz-descriptions-item> 
                       <nz-descriptions-item nzTitle="Circulo" [nzSpan]="1"><p poliza = "poliza">{{poliza.circulo}}</p></nz-descriptions-item>
                       <nz-descriptions-item nzTitle="Pagada hasta" [nzSpan]="1"><p poliza = "poliza">{{poliza.pagadoHasta}}</p></nz-descriptions-item>
