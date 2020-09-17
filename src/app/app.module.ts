@@ -22,6 +22,7 @@ import es from '@angular/common/locales/es';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
+import { Usuario1Component } from './usuario1/usuario1.component';
 
 registerLocaleData(es);
 
@@ -29,12 +30,14 @@ registerLocaleData(es);
 
 const rutas: Routes =[
   {path: 'preguntas-seguridad3', component: Preguntasseguridad3Component},
+  {path: 'preguntas-seguridad3/:TGFS8822339S0', component: Preguntasseguridad3Component},
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     Preguntasseguridad3Component,
+    Usuario1Component,
   
   ],
   imports: [
