@@ -33,7 +33,7 @@ perfiles: any;
         console.log(this.clientes);
       });
 
-    db.object('/clientes/RISW8822119S0/datosPoliza')
+    db.object('/clientes/TGFS8822339S0/datosPoliza')
       .valueChanges()
       .subscribe(poliza=> {
         this.poliza= poliza;

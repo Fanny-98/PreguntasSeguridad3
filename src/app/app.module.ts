@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { Preguntasseguridad3Component } from './preguntasseguridad3/preguntasseguridad3.component';
 
+
 import {DemoNgZorroAntdModule} from './ng-zorro-antd.module';
 
 import { FormsModule } from '@angular/forms';
@@ -24,17 +25,17 @@ import {environment} from '../environments/environment';
 
 registerLocaleData(es);
 
+
+
 const rutas: Routes =[
-  {
-    path: 'preguntas-seguridad3',
-    component: Preguntasseguridad3Component
-  }
-]
+  {path: 'preguntas-seguridad3', component: Preguntasseguridad3Component},
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    Preguntasseguridad3Component
+    Preguntasseguridad3Component,
+  
   ],
   imports: [
     BrowserModule,
