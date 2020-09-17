@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { Preguntasseguridad3Component } from './preguntasseguridad3/preguntasseguridad3.component';
 
-
 import {DemoNgZorroAntdModule} from './ng-zorro-antd.module';
 
 import { FormsModule } from '@angular/forms';
@@ -23,14 +22,17 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import { Usuario1Component } from './usuario1/usuario1.component';
+import { Usuario2Component } from './usuario2/usuario2.component';
 
 registerLocaleData(es);
 
 
 
 const rutas: Routes =[
-  {path: 'preguntas-seguridad3', component: Preguntasseguridad3Component},
-  {path: 'preguntas-seguridad3/:TGFS8822339S0', component: Preguntasseguridad3Component},
+  /* {path: 'preguntas-seguridad3', component: Preguntasseguridad3Component}, */
+  {path: 'preguntas-seguridad4/TGFS8822339S0', component: Usuario1Component },
+  {path: 'preguntas-seguridad4/RISW8822119S0', component: Usuario2Component},
+  
 ];
 
 @NgModule({
@@ -38,7 +40,7 @@ const rutas: Routes =[
     AppComponent,
     Preguntasseguridad3Component,
     Usuario1Component,
-  
+    Usuario2Component
   ],
   imports: [
     BrowserModule,
