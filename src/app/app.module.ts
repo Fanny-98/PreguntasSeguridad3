@@ -30,8 +30,8 @@ registerLocaleData(es);
 
 const rutas: Routes =[
   /* {path: 'preguntas-seguridad3', component: Preguntasseguridad3Component}, */
-  {path: 'preguntas-seguridad4/TGFS8822339S0', component: Usuario1Component },
-  {path: 'preguntas-seguridad4/RISW8822119S0', component: Usuario2Component},
+  {path: 'preguntas-seguridad/TGFS8822339S0', component: Usuario1Component },
+  {path: 'preguntas-seguridad/RISW8822119S0', component: Usuario2Component},
   
 ];
 
