@@ -23,6 +23,7 @@ clientes:any;
 poliza: any;
 ramos: any;
 perfiles: any;
+nombreC: any;
   constructor (db:AngularFireDatabase){
     db.object('/clientes/RISW8822119S0/datosCliente')
       .valueChanges()
@@ -36,6 +37,13 @@ perfiles: any;
       .subscribe(poliza=> {
         this.poliza= poliza;
         console.log(this.poliza);
+      });
+
+      db.object('/clientes/RISW8822119S0/datosCliente/nombreCompleto')
+      .valueChanges()
+      .subscribe(nombreC=> {
+        this.nombreC= nombreC;
+        console.log(this.nombreC);
       });
 
       db.object('/ramos')

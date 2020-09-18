@@ -24,12 +24,20 @@ export class Usuario1Component {
   poliza: any;
   ramos: any;
   perfiles: any;
+  nombreC: any;
     constructor (db:AngularFireDatabase){
       db.object('/clientes/TGFS8822339S0/datosCliente')
         .valueChanges()
         .subscribe(clientes=> {
           this.clientes= clientes;
           console.log(this.clientes);
+        });
+
+        db.object('/clientes/TGFS8822339S0/datosCliente/nombreCompleto')
+        .valueChanges()
+        .subscribe(nombreC=> {
+          this.nombreC= nombreC;
+          console.log(this.nombreC);
         });
   
       db.object('/clientes/TGFS8822339S0/datosPoliza')
