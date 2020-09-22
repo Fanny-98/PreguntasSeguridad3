@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NzButtonSize } from 'ng-zorro-antd/button';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Params, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-preguntasseguridad3',
@@ -12,21 +13,26 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class Preguntasseguridad3Component {
   title = 'PreguntasSeguridad3';
 
-/*   datosCliente: any[];
-  constructor(db:AngularFireDatabase) {
-    db.list('/datosCliente').valueChanges()
-    .subscribe(datosCliente => {
-      this.datosCliente = datosCliente;
-       console.log(this.datosCliente);  
-});
-}
- */
+/*   //Ruta dinamica
+  id = '';
+  ngOnInit(){
+ this.id = this.route.snapshot.paramMap.get('id');
+} */
+
+//Firebase
 clientes:any;
 poliza: any;
+poliza2: any;
 ramos: any;
 perfiles: any;
 nombreC: any;
-  constructor (db:AngularFireDatabase){
+
+
+  paramQuery: any;
+  constructor (db:AngularFireDatabase, private activatedRoute: ActivatedRoute /* private router: Router, private route: ActivatedRoute */){
+   this.activatedRoute.params.subscribe(data => {
+     this.paramQuery = data.id;
+   })
     db.object('/clientes/TGFS8822339S0/datosCliente')
       .valueChanges()
       .subscribe(clientes=> {
@@ -40,6 +46,14 @@ nombreC: any;
         this.poliza= poliza;
         console.log(this.poliza);
       });
+
+      db.object('/clientes/RISW8822119S0/datosPoliza')
+      .valueChanges()
+      .subscribe(poliza2=> {
+        this.poliza2= poliza2;
+        console.log(this.poliza2);
+      });
+
 
       db.object('/clientes/TGFS8822339S0/datosCliente/nombreCompleto')
       .valueChanges()
@@ -64,7 +78,7 @@ nombreC: any;
       
     }
     
-
+//Ng Zorro
   isVisible = false;
 
   showModal(): void {
@@ -87,3 +101,16 @@ nombreC: any;
 export class NzDemoBreadcrumbSeparatorComponent {}
 
 
+/* export class NzDemoSelectCoordinateComponent {
+  selectedProvince = 'Zhejiang';
+  selectedCity = 'Hangzhou';
+  provinceData = ['Zhejiang', 'Jiangsu'];
+  cityData: { [place: string]: string[] } = {
+    Zhejiang: ['Hangzhou', 'Ningbo', 'Wenzhou'],
+    Jiangsu: ['Nanjing', 'Suzhou', 'Zhenjiang']
+  };
+
+  provinceChange(value: string): void {
+    this.selectedCity = this.cityData[value][0];
+  }
+} */

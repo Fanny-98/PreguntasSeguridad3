@@ -10,16 +10,17 @@
 
     <nz-layout class="layout">
         <nz-header>
+          
             <nz-descriptions class="colors" nzSize="small" [nzColumn]="6">
                 <nz-descriptions-item id="myHeader"nzTitle="Atendiendo a" [nzSpan]="1" clientes = "clientes">{{clientes.atendiendoA}}</nz-descriptions-item>
                 <nz-descriptions-item nzTitle="Perfil" [nzSpan]="1" perfiles = "perfiles">{{perfiles.clasico}}</nz-descriptions-item>
               </nz-descriptions>
 
               <nz-descriptions nzSize="small" [nzColumn]="6">
-                <nz-descriptions-item nzTitle="Nombre" [nzSpan]="1" nombreC = "nombreC">{{nombreC.nombre}} {{nombreC.apellidoPaterno}} {{nombreC.apellidoMaterno}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Nombre" [nzSpan]="1" nombreC = "nombreC" >{{nombreC.nombre}} {{nombreC.apellidoPaterno}} {{nombreC.apellidoMaterno}}</nz-descriptions-item>
                 <nz-descriptions-item nzTitle="No. Cliente" [nzSpan]="1"clientes = "clientes">{{clientes.noCliente}}</nz-descriptions-item>
                 <nz-descriptions-item nzTitle="Telefono" [nzSpan]="1"clientes = "clientes">{{clientes.telefono}}</nz-descriptions-item>
-                <nz-descriptions-item nzTitle="RFC" [nzSpan]="1"clientes = "clientes">{{clientes.rfc}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="RFC" [nzSpan]="1"clientes = "clientes">{{paramQuery}}</nz-descriptions-item>
                 <nz-descriptions-item nzTitle="Rol" [nzSpan]="1"clientes = "clientes">{{clientes.rol}}</nz-descriptions-item>
                 <nz-descriptions-item nzTitle="Reg" [nzSpan]="1">
                   <i class="icon3"nz-icon nzType="close-circle" nzTheme="twotone" [nzTwotoneColor]="'#D43019'"></i>

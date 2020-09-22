@@ -21,26 +21,35 @@ import es from '@angular/common/locales/es';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
-import { Usuario1Component } from './usuario1/usuario1.component';
-import { Usuario2Component } from './usuario2/usuario2.component';
+
+//Ruta dinamica
 
 registerLocaleData(es);
 
 
 
 const rutas: Routes =[
-  {path: 'preguntas-seguridad3', component: Preguntasseguridad3Component},
-  {path: 'preguntas-seguridad/TGFS8822339S0', component: Usuario1Component },
-  {path: 'preguntas-seguridad/RISW8822119S0', component: Usuario2Component},
+/*   { //Si pone La ruta principa lhttp://localhost:4200/  te redirigira a la ruta de preguntas-seguridad
+    path:'',
+    pathMatch: 'full',
+    redirectTo: 'preguntas-seguridad'
+  }, */
+  { //RutaSimple
+    path: 'preguntas-seguridad',
+    component: Preguntasseguridad3Component
+  },
+  { //Ruta dinamica
+    path: 'preguntas-seguridad/:id',
+    component: Preguntasseguridad3Component
+  },
+  
   
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    Preguntasseguridad3Component,
-    Usuario1Component,
-    Usuario2Component
+    Preguntasseguridad3Component
   ],
   imports: [
     BrowserModule,
