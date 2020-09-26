@@ -39,8 +39,9 @@ const rutas: Routes =[
     component: Preguntasseguridad3Component
   },
   { //Ruta dinamica
-    path: 'preguntas-seguridad/:id',
-    component: Preguntasseguridad3Component
+    path: 'preguntas-seguridad/:claveCliente',
+    component: Preguntasseguridad3Component,
+
   },
   
   
