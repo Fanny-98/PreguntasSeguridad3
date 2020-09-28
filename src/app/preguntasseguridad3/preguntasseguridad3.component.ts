@@ -23,10 +23,10 @@ export class Preguntasseguridad3Component implements OnInit{
 
 
   constructor(db:AngularFireDatabase, private router: Router, private ActivatedRoute: ActivatedRoute) {
-    
-       //Firebase
 
-       db.object('/clientes/TGFS8822339S0/datosCliente')
+       //Firebase
+/* this.router.navigate([`/clientes/${this.claveCliente}/datosCliente`]); */
+       db.object(`/clientes/${this.claveCliente}/datosCliente`)
        .valueChanges()
        .subscribe(clientes=> {
          this.clientes= clientes;
@@ -34,14 +34,14 @@ export class Preguntasseguridad3Component implements OnInit{
        });
        
      
-     db.object('/clientes/TGFS8822339S0/datosPoliza')
+     db.object(`/clientes/${this.claveCliente}/datosPoliza`)
        .valueChanges()
        .subscribe(poliza=> {
          this.poliza= poliza;
          console.log(this.poliza);
        });
      
-       db.object('/clientes/TGFS8822339S0/datosCliente/nombreCompleto')
+       db.object(`/clientes/${this.claveCliente}/datosCliente/nombreCompleto`)
        .valueChanges()
        .subscribe(nombreC=> {
          this.nombreC= nombreC;
