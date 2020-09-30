@@ -41,7 +41,6 @@ const rutas: Routes =[
   { //Ruta dinamica
     path: 'preguntas-seguridad/:claveCliente',
     component: Preguntasseguridad3Component,
-
   },
   
   
@@ -67,3 +66,4 @@ const rutas: Routes =[
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
