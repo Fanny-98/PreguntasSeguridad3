@@ -34,10 +34,10 @@ const rutas: Routes =[
     pathMatch: 'full',
     redirectTo: 'preguntas-seguridad'
   }, */
-  { //RutaSimple
+/*   { //RutaSimple
     path: 'preguntas-seguridad',
     component: Preguntasseguridad3Component
-  },
+  }, */
   { //Ruta dinamica
     path: 'preguntas-seguridad/:claveCliente',
     component: Preguntasseguridad3Component,
