@@ -17,6 +17,7 @@ export class Preguntasseguridad3Component implements OnInit{
   poliza: any;
   poliza2: any;
   ramos: any;
+  roles: any;
   perfiles: any;
   nombreC: any;
   claveCliente: string;
@@ -69,6 +70,12 @@ cargaDeDatos(db, claveCliente): void {
    this.perfiles= perfiles;
    console.log(this.perfiles);
  });
+ db.object('/roles')
+ .valueChanges()
+ .subscribe(roles=> {
+ this.roles= roles;
+ console.log(this.roles);
+});
 }
 
 //Ng Zorro
