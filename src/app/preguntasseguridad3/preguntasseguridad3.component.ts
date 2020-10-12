@@ -100,16 +100,3 @@ cargaDeDatos(db, claveCliente): void {
 
 export class NzDemoBreadcrumbSeparatorComponent {}
 
-export class NzDemoSelectOptionsComponent {
-  selectedValue = 'lucy';
-  listOfOption = [
-    { label: 'Jack', value: 'jack' },
-    { label: 'Lucy', value: 'lucy' },
-    { label: 'disabled', value: 'disabled', disabled: true }
-  ];
-  listOfGroupOption = [
-    { label: 'Jack', value: 'jack', groupLabel: 'Manager' },
-    { label: 'Lucy', value: 'lucy', groupLabel: 'Manager' },
-    { label: 'Tom', value: 'tom', groupLabel: 'Engineer' }
-  ];
-}
