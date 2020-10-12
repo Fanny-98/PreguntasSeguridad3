@@ -40,7 +40,7 @@ cargaDeDatos(db, claveCliente): void {
  .valueChanges()
  .subscribe(clientes=> {
    this.clientes= clientes;
-   console.log(this.clientes);
+   console.log("clientes",this.clientes);
  });
  
  
@@ -48,33 +48,33 @@ cargaDeDatos(db, claveCliente): void {
  .valueChanges()
  .subscribe(poliza=> {
    this.poliza= poliza;
-   console.log(this.poliza);
+   console.log("poliza",this.poliza);
  });
   db.object(`/clientes/${this.claveCliente}/datosCliente/nombreCompleto`)
  .valueChanges()
  .subscribe(nombreC=> {
    this.nombreC= nombreC;
-   console.log(this.nombreC);
+   console.log("clientes: nombre completo",this.nombreC);
  });
  
- db.object('/ramos')
+ db.object(`/ramos/${this.claveCliente}`)
  .valueChanges()
  .subscribe(ramos=> {
    this.ramos= ramos;
-   console.log(this.ramos);
+   console.log("ramos", this.ramos);
  });
  
- db.object('/perfiles')
+ db.object(`/perfiles/${this.claveCliente}`)
  .valueChanges()
  .subscribe(perfiles=> {
    this.perfiles= perfiles;
-   console.log(this.perfiles);
+   console.log("perfiles",this.perfiles);
  });
- db.object('/roles')
+ db.object(`/roles/${this.claveCliente}`)
  .valueChanges()
  .subscribe(roles=> {
  this.roles= roles;
- console.log(this.roles);
+ console.log("roles",this.roles);
 });
 }
 

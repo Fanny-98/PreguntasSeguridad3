@@ -7,14 +7,14 @@
 export const environment = {
   production: false,
   firebase:{
-    apiKey: "AIzaSyCx0etTPxXNpDEh0tlOg2OJ44IPseudfRE",
-    authDomain: "prueba-d5e00.firebaseapp.com",
-    databaseURL: "https://prueba-d5e00.firebaseio.com",
-    projectId: "prueba-d5e00",
-    storageBucket: "prueba-d5e00.appspot.com",
-    messagingSenderId: "1056497554608",
-    appId: "1:1056497554608:web:4743ac4047ad2b9e7e1775",
-    measurementId: "G-7CJYGE96XY"
+    apiKey: "AIzaSyDu73WvI5Z0joJT0U5V86odv1XXa8dobts",
+    authDomain: "preguntasseguridad.firebaseapp.com",
+    databaseURL: "https://preguntasseguridad.firebaseio.com",
+    projectId: "preguntasseguridad",
+    storageBucket: "preguntasseguridad.appspot.com",
+    messagingSenderId: "771765801788",
+    appId: "1:771765801788:web:d27d2e2774bc1c4e100439",
+    measurementId: "G-S5RST846NK"
   }
 
   
